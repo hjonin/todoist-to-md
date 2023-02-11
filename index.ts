@@ -1,12 +1,13 @@
-import {convert} from "./convert";
-import * as fs from "fs/promises";
 import * as dotenv from 'dotenv'
+import * as fs from "fs/promises";
+
+import {todoistToMarkdown} from "./todoistToMarkdown";
 
 dotenv.config()
 
-convert(process.env.TOKEN as string).then((projects: string[]) => {
+todoistToMarkdown(process.env.TOKEN as string).then((projects: any[]) => {
     let i = 1;
     for (const project of projects) {
-        fs.writeFile(`${i++}.md`, project);
+        fs.writeFile(`${project.project_name}.md`, project.project_tree);
     }
 });
