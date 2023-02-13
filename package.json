@@ -4,7 +4,7 @@
   "description": "",
   "main": "todoistToMarkdown.ts",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
