@@ -2,6 +2,10 @@
 
 Todoist integration to turn your data into Markdown.
 
+## Motivations
+
+Take back control over your Todoist data by turning them into an open file format as Markdown. It'll let you use it then in your favorite note-taking app that supports Markdown, e.g. Joplin.
+
 ## Installation
 
 ```
