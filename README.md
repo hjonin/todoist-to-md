@@ -12,7 +12,7 @@ npm install todoist-to-md
 
 You can find an example of saving your Todoist data into Markdown files under [example/to-file](example/to-file).
 
-Run the example :
+Run the example:
 1. Configure the [.env](example/to-file/.env) file with your Todoist key.
 2. ```
     ts-node example/to-file/index.ts
@@ -20,12 +20,24 @@ Run the example :
 
 ## Development and testing
 
-Install dependencies :
+Install dependencies:
 ```
 npm install
 ```
 
-Test :
+Test:
 ```
 npm test
+```
+
+### Publishing
+
+Compile TS files:
+```
+npm run build
+```
+
+Publish:
+```
+npm publish
 ```
