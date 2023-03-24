@@ -43,5 +43,6 @@ npm run build
 
 Publish:
 ```
+npm version [version]
 npm publish
 ```

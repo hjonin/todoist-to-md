@@ -12,10 +12,10 @@
   "author": "hjonin",
   "license": "GPL",
   "dependencies": {
-    "@doist/todoist-api-typescript": "^2.1.2",
-    "dotenv": "^16.0.3"
+    "@doist/todoist-api-typescript": "^2.1.2"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "@jest/globals": "^29.4.2",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
