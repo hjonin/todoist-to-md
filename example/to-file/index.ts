@@ -3,7 +3,7 @@ import * as fs from "fs/promises";
 
 import {todoistToMarkdown} from "../../index";
 
-dotenv.config({ path: `${__dirname}/.env` })
+dotenv.config({path: `${__dirname}/.env`})
 
 todoistToMarkdown(process.env.TOKEN as string).then((projects: any[]) => {
     for (const project of projects) {

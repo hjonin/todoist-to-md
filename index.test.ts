@@ -1,6 +1,6 @@
 import {describe, expect, test} from '@jest/globals';
 
-import {TodoistNode, ItemType, createTree, formatTree, TodoistComment} from './index';
+import {createTree, formatTree, ItemType, TodoistComment, TodoistNode} from './index';
 
 const n1 = new TodoistNode(ItemType.PROJECT, '1', 'n1', null, []);
 const n2 = new TodoistNode(ItemType.SECTION, '2', 'n2', null, []);
