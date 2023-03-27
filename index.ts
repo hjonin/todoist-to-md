@@ -1,5 +1,7 @@
 import {TodoistApi} from "@doist/todoist-api-typescript";
 
+export type TodoistProject = { 'project_name': string, 'project_tree': string };
+
 export enum ItemType {
     PROJECT,
     SECTION,
@@ -119,10 +121,10 @@ class TodoistToMarkdown {
         return new TodoistToMarkdown(projects, sections, tasks, comments);
     }
 
-    convert() {
+    convert(): TodoistProject[] {
         const allItems = this.projects.concat(this.sections).concat(this.tasks)
             .map(item => item as TodoistNode);
-        let projectTrees = [];
+        let projectTrees: TodoistProject[] = [];
         const rootProjects = this.projects.filter(project => project.parentId == null)
             .map(item => item as TodoistNode);
         for (const rootProject of rootProjects) {
@@ -134,6 +136,6 @@ class TodoistToMarkdown {
     }
 }
 
-export async function todoistToMarkdown(token: string) {
+export async function todoistToMarkdown(token: string): Promise<TodoistProject[]> {
     return (await TodoistToMarkdown.initialize(token)).convert();
 }
